@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    tools:context="com.company.musicscore.MainActivity" >
+     <fragment
+        android:id="@+id/navigation_drawer_large"
+        android:name="com.company.musicscore.NavigationFragment"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        tools:layout="@layout/fragment_navigation_drawer" />  
+     <com.company.musicscore.util.MyViewPager
+            android:id="@+id/mViewPager_large"
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent">
+            
+    </com.company.musicscore.util.MyViewPager> 
+
+</LinearLayout>

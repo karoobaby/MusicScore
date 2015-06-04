@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScoreRulerElement">
+        <!-- 刻度最小值 -->
+        <attr name="value_Scale_Min" format="integer"/>
+        <!-- 刻度最大值 -->
+        <attr name="value_Scale_Max" format="integer"/>
+        <!-- 刻度数量 -->
+        <attr name="scale_Nums" format="integer"/>
+        <!-- 标题 -->
+        <attr name="titles" format="string"/>
+        <!-- 标题尺寸 -->
+        <attr name="titles_size" format="dimension"/>
+        <!-- 标题位置 -->
+        <attr name="titles_align" format="enum"/>
+        <!-- 标题和网格颜色 -->
+        <attr name="titles_color" format="color"/>
+        <!-- 画线分类 -->
+        <attr name="ruler_Targe" format="boolean"/>
+        <!-- 网格偏移量 -->
+        <attr name="line_Offset" format="dimension"/>
+        <!-- 标题左右位置 -->
+        <attr name="title_Gravity" format="string"/>
+        <!-- 是否显示标题 -->
+        <attr name="title_Show" format="boolean"/>
+        <!-- SeekBar左边偏移量 -->
+        <attr name="seekBar_layout_leftmargin" format="dimension"/>
+    </declare-styleable>
+</resources>

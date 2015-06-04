@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">音乐考试</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_chapter">曲目</string>
+    <string name="action_settings">设置</string>
+    <string name="title_row1">技术能力</string>
+    <string name="title_row2">乐感表现</string>
+    <string name="title_row3">完成质量</string>
+    <string name="title_row4">嗓音条件</string>
+    <string name="title_row5">难度级别</string>
+    <string name="cont_row1">1</string>
+    <string name="cont_row2">1</string>
+    <string name="cont_row3">1</string>
+    <string name="cont_row4">1</string>
+    <string name="cont_row5">1</string>
+    <string name="search_title">搜索</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_insert_data">InsertDataActivity</string>
+    <string name="title_activity_initialize">InitializeActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_settings">设置</string>
+    <string name="local_ip">local_ip</string>
+    <string name="general_ip">general_ip</string>
+    <string name="general_ip_default">192.168.1.122</string>
+    <string name="general_port">general_port</string>
+    <string name="general_port_default">10001</string>
+    <string name="general_device">general_device</string>
+    <string name="general_device_default">1</string>
+    <string name="btn_start">开始考试</string>
+    <string name="btn_configure">考试配置</string>
+    <string name="title_activity_index">IndexActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

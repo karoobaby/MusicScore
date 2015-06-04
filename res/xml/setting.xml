@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="设置" >
+    <PreferenceCategory
+        android:id="@+id/preference_general"
+        android:key="set_general"
+        android:summary="配置服务器地址、端口等"
+        android:title="一般配置" >
+        <EditTextPreference
+            android:defaultValue="@string/general_ip_default"
+            android:key="@string/local_ip"
+            android:maxLines="1"
+        	android:selectAllOnFocus="true"
+        	android:singleLine="true"
+        	android:title="本机IP"
+            android:summary=""/>
+        <EditTextPreference
+            android:defaultValue="@string/general_ip_default"
+            android:key="@string/general_ip"
+            android:maxLines="1"
+        	android:selectAllOnFocus="true"
+        	android:singleLine="true"
+            android:summary="配置远程服务器地址（用于提交数据、同步数据）"
+            android:title="服务器IP" />
+        <EditTextPreference
+            android:defaultValue="@string/general_port_default"
+            android:key="@string/general_port"
+            android:summary="配置服务器连接本机端口（端口号用于远程服务器发送数据）"
+            android:title="本机端口" />
+        <EditTextPreference
+            android:key="@string/general_device"
+            android:defaultValue="@string/general_device_default"
+            android:summary="配置本机的标识（标识用于区分机器，必须唯一）"
+            android:title="机器标识" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="set_sync"
+        android:summary="同步学生和配置信息"
+        android:title="数据同步" >
+        <com.company.musicscore.util.SyncPreference
+            android:key="sync_pref"
+            android:persistent="false">
+            
+        </com.company.musicscore.util.SyncPreference>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="set_network"
+        android:summary="配置系统的网络信息"
+        android:title="网络配置" >
+    </PreferenceCategory>
+</PreferenceScreen>

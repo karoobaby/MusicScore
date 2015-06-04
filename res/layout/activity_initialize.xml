@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.company.musicscore.InitializeActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/beijing">
+    <ImageButton
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/btn_start"
+        android:background="@drawable/bg_kaoshi_btn"/>
+    <ImageButton 
+        android:id="@+id/btn_configure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/btn_configure"
+        android:background="@drawable/bg_peizhi_btn"/>
+</LinearLayout>
+

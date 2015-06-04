@@ -1,0 +1,21 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    -->
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light">
+        <!-- API 14 theme customizations can go here. -->
+        <item name="android:actionBarStyle">@style/my_actionbar_style</item>   
+    </style>
+<style name="my_actionbar_style" parent="@style/Widget.AppCompat.ActionBar.Solid">
+	    <item name="android:background">@drawable/actionbar_background_textured</item>
+	    <item name="android:backgroundStacked">#4A708B</item>
+	    <item name="android:backgroundSplit">@drawable/actionbar_background_textured</item>  
+	    <item name="android:titleTextStyle">@style/AcBar_titleStyle</item>  
+	</style>
+	<style name="AcBar_titleStyle" parent="@android:style/TextAppearance.Holo.Large">    
+        <item name="android:textColor">#FFFFFF</item>    
+    </style> 
+</resources>

@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F1F1F1"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="0dp"
+    tools:context="com.company.musicscore.NavigationDrawerFragment" >
+    <TextView android:layout_width="match_parent" android:layout_height="50dp" 
+            android:background="@color/brown1"
+            android:gravity="center"
+            android:text="选手资料"
+            android:textSize="18sp"
+            style="@style/down_radius_black_style"/>
+		<ImageView android:id="@+id/img_xuanshou" 
+		    android:contentDescription="选手"
+		    android:background="@drawable/bg_border"
+		    android:padding="3dp" 
+		    android:layout_width="match_parent" 
+		    android:layout_height="150dp"/>
+		<ListView android:id="@+id/msg_list" 
+		    android:layout_width="match_parent" 
+		    android:layout_height="wrap_content">
+		    
+		</ListView>
+
+        <TextView android:layout_width="match_parent" android:layout_height="50dp" 
+            android:background="@color/brown1"
+            android:gravity="center"
+            android:text="评委资料"
+            android:textSize="18sp"
+            style="@style/down_radius_black_style"/>
+
+    <ListView android:id="@+id/msg_list1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+    <Button
+        android:id="@+id/score_submit"
+        android:background="@drawable/submit" 
+        android:layout_width="match_parent"
+        android:text="提交分数"
+        style="@style/down_radius_black_style"
+        android:textSize="25dp"
+        android:textColor="@color/white" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+</LinearLayout>
+

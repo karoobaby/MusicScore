@@ -1,0 +1,220 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:music="http://schemas.android.com/apk/res/com.example.musicscore"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.company.musicscore.MainFragment" >
+
+    <!-- 顶部评分标题 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <!-- 技术能力 -->
+
+        <TableLayout
+            android:id="@+id/jishu_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" 
+             >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/jishu_txt"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/cont_row1"
+                    android:textColor="@color/red1"
+                    android:textSize="@dimen/title_size" />
+            </TableRow>
+			
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/title_row1"
+                    android:textColor="@color/black" />
+            </TableRow>
+        </TableLayout>
+        
+        <!-- 乐感表现 -->
+
+        <TableLayout
+            android:id="@+id/yuegan_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/table_margin" >
+
+            <TableRow android:layout_width="wrap_content" >
+
+                <TextView
+                    android:id="@+id/yuegan_txt"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/cont_row2"
+                    android:textColor="@color/red1"
+                    android:textSize="@dimen/title_size" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/title_row2"
+                    android:textColor="@color/black" />
+            </TableRow>
+        </TableLayout>
+        
+        <!-- 完成质量 -->
+
+        <TableLayout
+            android:id="@+id/zhiliang_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/table_margin" >
+
+            <TableRow android:layout_width="wrap_content" >
+
+                <TextView
+                    android:id="@+id/zhiliang_txt"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/cont_row3"
+                    android:textColor="@color/red1"
+                    android:textSize="@dimen/title_size" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/title_row3"
+                    android:textColor="@color/black" />
+            </TableRow>
+        </TableLayout>
+        
+        <!-- 嗓音条件 -->
+
+        <TableLayout
+            android:id="@+id/sangyin_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/table_margin" >
+
+            <TableRow android:layout_width="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sangyin_txt"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/cont_row4"
+                    android:textColor="@color/red1"
+                    android:textSize="@dimen/title_size" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/title_row4"
+                    android:textColor="@color/black" />
+            </TableRow>
+        </TableLayout>
+        
+        <!-- 难度级别 -->
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/table_margin" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/nandu_txt"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/cont_row5"
+                    android:textColor="@color/red1"
+                    android:textSize="@dimen/title_size" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/title_row5"
+                    android:textColor="@color/black" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <!-- 评分条 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" 
+        android:gravity="center_horizontal">
+      <com.company.musicscore.util.Ruler
+        android:id="@+id/jishu_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp" >
+        </com.company.musicscore.util.Ruler>
+	<com.company.musicscore.util.Ruler
+	    android:id="@+id/yuegan_bar"
+	    music:title_Show="false"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp" >
+    </com.company.musicscore.util.Ruler>
+    <com.company.musicscore.util.Ruler
+        android:id="@+id/zhiliang_bar"
+        music:title_Show="false"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp" >
+    </com.company.musicscore.util.Ruler>
+    <com.company.musicscore.util.Ruler
+        android:id="@+id/sangyin_bar"
+        music:title_Show="false"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp" >
+    </com.company.musicscore.util.Ruler>
+	<com.company.musicscore.util.Ruler
+        android:id="@+id/nandu_bar"
+        music:scale_Nums="9"
+        music:value_Scale_Max="9"
+        music:ruler_Targe="false"
+        music:titles="1,2,3,4,5,6,7,8,9"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp" >
+    </com.company.musicscore.util.Ruler>
+    </LinearLayout>
+	
+</LinearLayout>
