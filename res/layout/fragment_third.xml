@@ -62,6 +62,13 @@
                     android:text="@string/cont_row2"
                     android:textColor="@color/red1"
                     android:textSize="@dimen/title_size" />
+                <TextView 
+                    android:id="@+id/yuegan_value"
+                    android:layout_gravity="center_horizontal"
+                    android:text=".00"
+                    android:textColor="@color/red1"
+                    android:textSize="@dimen/title_size"
+                    />
             </TableRow>
 
             <TableRow
@@ -188,6 +195,10 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp" >
     </com.company.musicscore.util.Ruler>
+    <NumberPicker
+        android:id="@+id/yuegan_picker" 
+        android:layout_width="40dp" 
+        android:layout_height="match_parent"/>
     <com.company.musicscore.util.Ruler
         android:id="@+id/zhiliang_bar"
         music:title_Show="false"

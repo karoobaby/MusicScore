@@ -63,7 +63,8 @@ public class MainActivity extends ActionBarActivity implements OnScoreButtonClic
 	private NavigationDrawerFragment mNavigationDrawerFragment;
 	private List<Fragment> listFragment;
 	private ViewPager mPager;
-	private MainFragment mMainFragment;//第一轮Fragment
+	private BaseFragment mMainFragment;//当前Fragment;
+	private MainFragment mFirstFragment;//第一轮Fragment;
 	private SecondFragment mSencondFragment;//第二轮Fragment;
 	private ThirdFragment mThirdFragment;//第三轮Fragment;
 	private DatagramSocket sUdp = null;// 发送数据Socket
@@ -312,10 +313,10 @@ public class MainActivity extends ActionBarActivity implements OnScoreButtonClic
 	public void InitViewPager(ViewPager viewPager)
 	{
 		listFragment=new ArrayList<Fragment>();
-		 mMainFragment=MainFragment.newInstance("0");
+		 mFirstFragment=MainFragment.newInstance("0");
 		 mSencondFragment=SecondFragment.newInstance("1");
 		 mThirdFragment=ThirdFragment.newInstance("2");
-		 listFragment.add(mMainFragment);
+		 listFragment.add(mFirstFragment);
 		 listFragment.add(mSencondFragment);
 		 listFragment.add(mThirdFragment);
 		 MyFragmentPagerAdapter adapter=new MyFragmentPagerAdapter(this.getSupportFragmentManager(), viewPager, listFragment);
@@ -634,6 +635,7 @@ public class MainActivity extends ActionBarActivity implements OnScoreButtonClic
 	public boolean onNavigationItemSelected(int position, long id) {
 		// TODO Auto-generated method stub
 		mPager.setCurrentItem(position);
+		mMainFragment=(BaseFragment)listFragment.get(position);
 		return true;
 	}
 }

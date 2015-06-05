@@ -27,27 +27,27 @@ import android.widget.TextView;
 
 public class BaseFragment extends Fragment implements OnRulerChangeListener {
 	private static final String PARAM= "param";
-	private TextView jishu_txt;//技术分数
-	private TextView yuegan_txt;//乐感分数
-	private TextView zhiliang_txt;//质量分数
-	private TextView sangyin_txt;//嗓音分数
-	private TextView nandu_txt;//难度分数
-	private Ruler jishu_bar;//技术滑块
-	private Ruler yuegan_bar;//乐感滑块
-	private Ruler zhiliang_bar;//质量滑块
-	private Ruler sangyin_bar;//嗓音滑块
-	private Ruler nand_bar;//难度滑块
-	private TableLayout sangyin_layout;//嗓音模块
-	private WebServiceHelper serviceHelper;//调用WebService;
-	private String serviceParams;//服务参数;
-	private SoapObject serviceResult;//服务状态;
-	private Map<String, String> serviceMap;//参数
+	public TextView jishu_txt;//技术分数
+	public TextView yuegan_txt;//乐感分数
+	public TextView zhiliang_txt;//质量分数
+	public TextView sangyin_txt;//嗓音分数
+	public TextView nandu_txt;//难度分数
+	public Ruler jishu_bar;//技术滑块
+	public Ruler yuegan_bar;//乐感滑块
+	public Ruler zhiliang_bar;//质量滑块
+	public Ruler sangyin_bar;//嗓音滑块
+	public Ruler nand_bar;//难度滑块
+	public TableLayout sangyin_layout;//嗓音模块
+	public WebServiceHelper serviceHelper;//调用WebService;
+	public String serviceParams;//服务参数;
+	public SoapObject serviceResult;//服务状态;
+	public Map<String, String> serviceMap;//参数
 	public boolean serviceStatus=false;//返回状态
-	private Gson gson=new Gson();
+	public Gson gson=new Gson();
 	public Myhandler myhandler;
 	private View rootView;
 	public ProgressDialog progressDialog = null;
-	private ExamScore examScore;
+	public ExamScore examScore;
 	public ExamScore getExamScore() {
 		return examScore;
 	}
@@ -126,6 +126,15 @@ public class BaseFragment extends Fragment implements OnRulerChangeListener {
 		}
 		return message;
 	}
+	
+	public Runnable ScoreRunnable=new Runnable() {
+
+		@Override
+		public void run() {
+			// TODO Auto-generated method stub
+			
+		}
+	};
 	/**
 	 * 初始化基础信息
 	 * @param rootView 当前fragment

@@ -1,40 +1,22 @@
 package com.company.musicscore;
 
 import com.example.musicscore.R;
+
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.sax.RootElement;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.NumberPicker;
+import android.widget.TextView;
+import android.widget.NumberPicker.Formatter;
+import android.widget.NumberPicker.OnValueChangeListener;
 
-/**
- * A simple {@link Fragment} subclass. Activities that contain this fragment
- * must implement the {@link ThirdFragment.OnFragmentInteractionListener}
- * interface to handle interaction events. Use the
- * {@link ThirdFragment#newInstance} factory method to create an instance of
- * this fragment.
- *
- */
-public class ThirdFragment extends Fragment {
-	// TODO: Rename parameter arguments, choose names that match
-	// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+public class ThirdFragment extends BaseFragment implements OnValueChangeListener,Formatter {
 	private static final String ARG_PARAM = "param";
-
-	// TODO: Rename and change types of parameters
-	private String mParam;
-
-
-	/**
-	 * Use this factory method to create a new instance of this fragment using
-	 * the provided parameters.
-	 *
-	 * @param param1
-	 *            Parameter 1.
-	 * @param param2
-	 *            Parameter 2.
-	 * @return A new instance of fragment ThirdFragment.
-	 */
-	// TODO: Rename and change types and number of parameters
+	private NumberPicker yuegan_picker;
+	private TextView yuegan_value;
+	private View rootView;
 	public static ThirdFragment newInstance(String param) {
 		ThirdFragment fragment = new ThirdFragment();
 		Bundle args = new Bundle();
@@ -42,23 +24,38 @@ public class ThirdFragment extends Fragment {
 		fragment.setArguments(args);
 		return fragment;
 	}
-
-	public ThirdFragment() {
-		// Required empty public constructor
-	}
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if (getArguments() != null) {
-			mParam = getArguments().getString(ARG_PARAM);
-		}
 	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		// Inflate the layout for this fragment
-		return inflater.inflate(R.layout.fragment_third, container, false);
+		rootView=inflater.inflate(R.layout.fragment_third, container, false);
+		bindAll(rootView);
+		yuegan_picker=(NumberPicker)rootView.findViewById(R.id.yuegan_picker);
+		yuegan_value=(TextView)rootView.findViewById(R.id.yuegan_value);
+		yuegan_picker.setOnValueChangedListener(this);
+		yuegan_picker.setMinValue(0);
+		yuegan_picker.setMaxValue(99);
+		yuegan_picker.setFormatter(this);
+		yuegan_picker.setValue(50);
+		return rootView;
+	}
+
+	@Override
+	public String format(int value) {
+		String tmpStr = String.valueOf(value);
+        if (value < 10) {
+            tmpStr = "0" + tmpStr;
+        }
+        return tmpStr;
+	}
+
+	@Override
+	public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+		// TODO Auto-generated method stub
+		yuegan_value.setText("."+format(newVal));
 	}
 }

@@ -132,7 +132,11 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
         return mDrawerLayout != null && mDrawerLayout.isDrawerOpen(mFragmentContainerView);
     }
 
-    
+    /**
+     * 加载导航栏
+     * @param fragmentId
+     * @param drawerLayout
+     */
     public void setUp(int fragmentId, DrawerLayout drawerLayout) {
         mFragmentContainerView = getActivity().findViewById(fragmentId);
         mDrawerLayout = drawerLayout;
