@@ -3,7 +3,6 @@ package com.company.musicscore;
 import com.example.musicscore.R;
 
 import android.os.Bundle;
-import android.sax.RootElement;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

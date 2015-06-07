@@ -1,11 +1,14 @@
 package com.company.musicscore;
 
 import java.lang.ref.WeakReference;
+import java.util.HashMap;
 import java.util.Map;
 
+import org.json.JSONObject;
 import org.ksoap2.serialization.SoapObject;
 
 import com.company.musicscore.MainFragment.Myhandler;
+import com.company.musicscore.db.DataSync;
 import com.company.musicscore.model.ExamScore;
 import com.company.musicscore.util.Ruler;
 import com.company.musicscore.util.WebServiceHelper;
@@ -14,9 +17,12 @@ import com.company.musicscore.util.Tools;
 import com.example.musicscore.R;
 import com.google.gson.Gson;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -45,7 +51,6 @@ public class BaseFragment extends Fragment implements OnRulerChangeListener {
 	public boolean serviceStatus=false;//返回状态
 	public Gson gson=new Gson();
 	public Myhandler myhandler;
-	private View rootView;
 	public ProgressDialog progressDialog = null;
 	public ExamScore examScore;
 	public ExamScore getExamScore() {
@@ -128,10 +133,8 @@ public class BaseFragment extends Fragment implements OnRulerChangeListener {
 	}
 	
 	public Runnable ScoreRunnable=new Runnable() {
-
 		@Override
 		public void run() {
-			// TODO Auto-generated method stub
 			
 		}
 	};

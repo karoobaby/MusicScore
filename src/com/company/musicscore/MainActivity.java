@@ -27,7 +27,6 @@ import com.example.musicscore.R;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar.OnNavigationListener;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -635,7 +634,18 @@ public class MainActivity extends ActionBarActivity implements OnScoreButtonClic
 	public boolean onNavigationItemSelected(int position, long id) {
 		// TODO Auto-generated method stub
 		mPager.setCurrentItem(position);
-		mMainFragment=(BaseFragment)listFragment.get(position);
+		if(position==0)
+		{
+			mMainFragment=(MainFragment)listFragment.get(position);
+		}
+		else if(position==1)
+		{
+			mMainFragment=(SecondFragment)listFragment.get(position);
+		}
+		else
+		{
+			mMainFragment=(ThirdFragment)listFragment.get(position);
+		}
 		return true;
 	}
 }
